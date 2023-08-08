@@ -2,26 +2,39 @@
 
 System operator prototype. Rule based system recovery. Docker events are used to trigger system events. Custom rules consume system events and trigger system (recovery) actions.
 
+## Recovery Patterns
+
+![Scenario](./img/patterns.png)
+
+## System Operator
+
+![Behavior](./img/system.png)
 
 ## Build
+
 ```sh
 npm run clean
 npm install
 npm run build
 ```
 
-## Terminal 1
+## Usage
+
+### Terminal 1
+
 ```sh
 xhost +local:docker
 docker-compose up
 ```
 
-## Terminal 2
+### Terminal 2
+
 ```sh
 npm start
 ```
 
-## Terminal 3
+### Terminal 3
+
 ```sh
 docker-compose kill relay
 ```
